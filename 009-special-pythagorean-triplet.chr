@@ -1,0 +1,15 @@
+/*
+ *
+ * See http://chrjs.net/playground.html
+ *
+ * Usage:
+ *   find
+ *
+ */
+
+find <=> check(0, 0, 1000)
+check(A, B, C) <=> 0 <= A, A <= B, B <= C, A + B + C === 1000 | pytha(A, B, C)
+pytha(A, B, C) ==> A*A + B*B === C*C | mul(A*B*C)
+pytha(A, B, C) <=> A*A + B*B < C*C | check(A+1, B+1, C-2)
+pytha(A, B, C) <=> A*A + B*B > C*C | check(A-1, B, C+1)
+mul(ABC) ==> true
